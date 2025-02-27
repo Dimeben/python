@@ -1,20 +1,59 @@
-#Formatting Methods
+"""Formatting Methods"""
+
 poem_title = "spring storm"
 poem_author = "William Carlos Williams"
 
-#Splitting Strings
+# Title case makes the first letter of each word capital
+poem_title_fixed = poem_title.title()
+
+poem_author_fixed = poem_author.upper()
+
+"""Splitting Strings"""
+
+line_one = "The sky has given over"
+# No delimiter uses whitespace as default
+line_one_words = line_one.split()
+
+authors = "Audre Lorde,Gabriela Mistral,Jean Toomer,An Qi,Walt Whitman,Shel Silverstein,Carmen Boullosa,Kamala Suraiyya,Langston Hughes,Adrienne Rich,Nikki Giovanni"
+
+# Creates a list with each element consisting of a first name and last name.
+author_names = authors.split(",")
+# Creates a list by iterating through the author_names list, splitting each element into a 2D list and taking the last value (last name)
+author_last_names = [name.split()[-1] for name in author_names]
+
+# \n Newline - allows us to split a multi-line string by line breaks
+# \t Horizontal Tab - allows us to split a string by tabs
+spring_storm_text = """The sky has given over 
+its bitterness. 
+Out of the dark change 
+all day long 
+rain falls and falls 
+as if it would never end. 
+Still the snow keeps 
+its hold on the ground. 
+But water, water 
+from a thousand runnels! 
+It collects swiftly, 
+dappled with black 
+cuts a way for itself 
+through green ice in the gutters. 
+Drop after drop it falls 
+from the withered grass-stems 
+of the overhanging embankment."""
+
+# Creates a list where each element is a line from spring_storm_text
+spring_storm_lines = spring_storm_text.split("\n")
+
+"""Joining Strings"""
 
 
-#Joining Strings
+""".strip()"""
 
 
-#.strip()
+"""Replace"""
 
 
-#Replace
+""".find()"""
 
 
-#.find()
-
-
-#.format()
+""".format()"""

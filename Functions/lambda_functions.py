@@ -1,47 +1,49 @@
-# Regular function 
+# Regular function
 
-def square(x): 
 
-    return x ** 2 
+def square(x):
 
-# Lambda function 
+    return x**2
 
-square_lambda = lambda x: x ** 2 
 
-#The basic syntax of a lambda function is:
-#lambda [arguments]: [expression] 
+# Lambda function
 
-# Lambda function to add two numbers 
+square_lambda = lambda x: x**2
 
-add = lambda a, b: a + b 
+# The basic syntax of a lambda function is:
+# lambda [arguments]: [expression]
 
-print(add(3, 5))  # Output: 8 
+# Lambda function to add two numbers
 
-# Lambda function to print a name 
+add = lambda a, b: a + b
 
-greeting = lambda name: f"Hello, {name}!" 
+print(add(3, 5))  # Output: 8
 
-print(greeting("Alice"))  # Output: Hello, Alice! 
+# Lambda function to print a name
 
-#The map() function applies the given lambda function to each item in a list:
-numbers = [1, 2, 3, 4, 5] 
+greeting = lambda name: f"Hello, {name}!"
 
-squared = list(map(lambda x: x ** 2, numbers)) 
+print(greeting("Alice"))  # Output: Hello, Alice!
 
-print(squared)  # Output: [1, 4, 9, 16, 25] 
+# The map() function applies the given lambda function to each item in a list:
+numbers = [1, 2, 3, 4, 5]
 
-#The filter() function creates a new list of elements for which the given lambda function returns True:
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+squared = list(map(lambda x: x**2, numbers))
 
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers)) 
+print(squared)  # Output: [1, 4, 9, 16, 25]
 
-print(even_numbers)  # Output: [2, 4, 6, 8, 10] 
+# The filter() function creates a new list of elements for which the given lambda function returns True:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-#The sorted() function can use a lambda function as a key for custom sorting:
-students = [('Alice', 'A', 15), ('Bob', 'B', 12), ('Charlie', 'A', 20)] 
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
 
-sorted_students = sorted(students, key=lambda x: x[2]) 
+print(even_numbers)  # Output: [2, 4, 6, 8, 10]
 
-print(sorted_students) 
+# The sorted() function can use a lambda function as a key for custom sorting:
+students = [("Alice", "A", 15), ("Bob", "B", 12), ("Charlie", "A", 20)]
 
-# Output: [('Bob', 'B', 12), ('Alice', 'A', 15), ('Charlie', 'A', 20)] 
+sorted_students = sorted(students, key=lambda x: x[2])
+
+print(sorted_students)
+
+# Output: [('Bob', 'B', 12), ('Alice', 'A', 15), ('Charlie', 'A', 20)]
