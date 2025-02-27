@@ -46,3 +46,12 @@ fixed_first_name = "R" + first_name[1:]
 
 #Escape Characters
 password = "theycallme\"crazy\"91"
+
+#Iterating through Strings - Finds length without using len()
+def get_length(string):
+    count = 0
+    for char in string:
+        count += 1
+    return count
+
+#Strings and Conditionals
