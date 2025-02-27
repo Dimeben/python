@@ -55,3 +55,36 @@ def get_length(string):
     return count
 
 #Strings and Conditionals
+#This function should return True if the word contains the letter and False if it does not.
+def letter_check(word, letter):
+    for char in word:
+     if char == letter:
+        return True
+    return False
+
+print("e" in "blueberry")
+# => True
+print("a" in "blueberry")
+# => False
+print("blue" in "blueberry")
+# => True
+print("blue" in "strawberry")
+# => False
+print("e" in "blueberry" and "e" in "carrot")
+# => False
+print("e" in "blueberry" and not "e" in "carrot")
+# => True
+
+#This function takes two arguments, big_string and little_string and returns True if big_string contains little_string.
+def contains(big_string, little_string):
+   if little_string in big_string:
+      return True
+   return False
+
+#This function takes two arguments, string_one and string_two and then returns a list with all of the letters they have in common.
+def common_letters(string_one, string_two):
+    common_letters_list = []
+    for char in string_one:
+        if char in string_two and char not in common_letters_list:
+            common_letters_list.append(char)
+    return common_letters_list
