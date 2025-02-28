@@ -132,6 +132,32 @@ for transaction in transactions_clean:
     sales.append(transaction[2])
     thread_sold.append(transaction[3])
 
-print(customers)
-print(sales)
-print(thread_sold)
+total_sales = 0
+
+for sale in sales:
+    sale_numeric = sale.strip("$")
+    total_sales += float(sale_numeric)
+
+thread_sold_split = []
+
+for thread in thread_sold:
+    if "&" in thread:
+        split_threads = thread.split("&")
+        thread_sold_split.append(split_threads[0])
+        thread_sold_split.append(split_threads[1])
+    else:
+        thread_sold_split.append(thread)
+
+
+def color_count(color):
+    return thread_sold_split.count(color)
+
+
+colors = ["red", "yellow", "green", "white", "black", "blue", "purple"]
+
+for color in colors:
+    print(
+        "There were {amount} sales of {color} thread today.".format(
+            amount=color_count(color), color=color
+        )
+    )
