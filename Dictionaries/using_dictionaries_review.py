@@ -22,3 +22,19 @@ tarot = {
     21: "The World",
     22: "The Fool",
 }
+
+# Create an empty dictionary called spread.
+spread = {}
+
+# The first card you draw is card 13. Pop the value assigned to the key 13 out of the tarot dictionary and assign it as the value of the "past" key of spread.
+spread["past"] = tarot.pop(13)
+
+# The second card you draw is card 22. Pop the value assigned to the key 22 out of the tarot dictionary and assign it as the value of the "present" key of spread.
+spread["present"] = tarot.pop(22)
+
+# The third card you draw is card 10. Pop the value assigned to the key 10 out of the tarot dictionary and assign it as the value of the "future" key of spread.
+spread["future"] = tarot.pop(10)
+
+# Iterate through the items in the spread dictionary and for each key: value pair, print out a string that says: Your {key} is the {value} card.
+for life, card in spread.items():
+    print(f"Your {life} is the {card} card.")
